@@ -44,7 +44,7 @@
 	export default {
 		data() {
 		return {
-				PageCur: 'profile'
+				PageCur: 'accumulate'
 			}
 		},
 		methods: {

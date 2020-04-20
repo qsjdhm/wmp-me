@@ -6,6 +6,14 @@
 			"style": {}
 		},
 		{
+			"path": "pages/accumulate/index",
+			"style": {}
+		},
+		{
+			"path": "pages/profile/index",
+			"style": {}
+		},
+		{
 			"path": "pages/basics/layout",
 			"style": {}
 		},

@@ -60,7 +60,7 @@
 				{
 					title: '海蓝',
 					name: 'blue',
-					color: '#0081ff'
+					color: '#3ea3f0'
 				},
 				{
 					title: '姹紫',
