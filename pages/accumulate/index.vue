@@ -12,7 +12,7 @@
 			</view>
 			
 			<view class="cu-card case">
-				<view v-for="(item,index) in articles" :key="index" class="cu-item shadow">
+				<view v-for="(item,index) in articles" :key="index" @tap="goDetail"  class="cu-item shadow">
 					<view class="image" v-bind:style="{backgroundImage:'url(' + item.cover + ')'}"></view>
 					<view class="cu-list menu-avatar">
 						<view class="cu-item">
@@ -82,7 +82,11 @@
 
 		},
 		methods: {
-
+			goDetail () {
+				uni.navigateTo({
+					url: '/pages/accumulate/detail'
+				})
+			}
 		}
 	}
 </script>
