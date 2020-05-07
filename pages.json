@@ -18,6 +18,10 @@
 			"style": {}
 		},
 		{
+			"path": "pages/repository/list",
+			"style": {}
+		},
+		{
 			"path": "pages/basics/layout",
 			"style": {}
 		},

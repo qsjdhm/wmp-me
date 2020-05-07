@@ -4,7 +4,7 @@
 			<image src="https://cdn.nlark.com/yuque/0/2019/png/280374/1552996358228-assets/web-upload/e256b4ce-d9a4-488b-8da2-032747213982.png"
 			 mode="widthFix" class="response"></image>
 			<view class="nav-list">
-				<navigator hover-class="none" :url="'/pages/basics/' + item.name" class="nav-li" navigateTo :class="'bg-'+item.color"
+				<navigator hover-class="none" url="/pages/repository/list" class="nav-li" navigateTo :class="'bg-'+item.color"
 				v-for="(item,index) in elements" :key="index">
 					<view class="nav-title">{{item.title}}</view>
 					<view class="nav-name">{{item.name}}</view>

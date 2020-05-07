@@ -6,7 +6,7 @@
 				<view class="cu-avatar xl round" style="background-image:url(https://cdn.nlark.com/yuque/0/2019/png/634279/1575884363463-avatar/568dd23a-43e8-423c-b250-ea592cdd597e.png?x-oss-process=image%2Fresize%2Cm_fill%2Cw_48%2Ch_48%2Fformat%2Cpng);"></view>
 				<view class="info-pack">
 					<view class="name">不拽注定被甩~</view>
-					<view class="position">前端leader</view>
+					<view class="position">山东万腾 · 前端leader</view>
 				</view>
 			</view>
 			<view class="cu-timeline">
@@ -77,6 +77,7 @@
 		padding: 30upx;
 		width: 100%;
 		height: 100%;
+		margin-bottom: 60upx;
 		background-color: #fff;
 	}
 	.basics-pack {
