@@ -1,4 +1,4 @@
-{
+export default {
     "hot":  [
         {
             "id": 1116,
@@ -168,7 +168,15 @@
             {
             	"id": 211,
             	"name": "uni-app填坑指南",
-            	"number": 10
+            	"number": 10,
+				"children": [
+                    {
+                        "id": 2111,
+                        "title": "【01】讲解前端技术向中台代码库概念（完成）",
+                        "src": "https://s1.ax1x.com/2020/04/24/J02eNd.jpg",
+                        "height": 5644
+                    }
+				]
             }
         ]
     }

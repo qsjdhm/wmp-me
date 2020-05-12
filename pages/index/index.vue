@@ -8,17 +8,17 @@
 		<view class="cu-bar tabbar bg-white shadow foot">
             <view class="action" @click="NavChange" data-cur="accumulate">
             	<view class='cuIcon-cu-image'>
-            		<image :src="'/static/tabbar/basics' + [PageCur=='accumulate'?'_cur':''] + '.png'"></image>
+            		<image :src="'/static/tabbar/accumulate' + [PageCur=='accumulate'?'_cur':''] + '.png'"></image>
             	</view>
-            	<view :class="PageCur=='accumulate'?'text-green':'text-gray'">积累</view>
+            	<view :class="PageCur=='accumulate'?'text-blue':'text-gray'">体系积累</view>
             </view>
             <view class="action" @click="NavChange" data-cur="profile">
             	<view class='cuIcon-cu-image'>
-            		<image :src="'/static/tabbar/basics' + [PageCur=='profile'?'_cur':''] + '.png'"></image>
+            		<image :src="'/static/tabbar/profile' + [PageCur=='profile'?'_cur':''] + '.png'"></image>
             	</view>
-            	<view :class="PageCur=='profile'?'text-green':'text-gray'">资料</view>
+            	<view :class="PageCur=='profile'?'text-blue':'text-gray'">我的资料</view>
             </view>
-			<view class="action" @click="NavChange" data-cur="basics">
+			<!--<view class="action" @click="NavChange" data-cur="basics">
 				<view class='cuIcon-cu-image'>
 					<image :src="'/static/tabbar/basics' + [PageCur=='basics'?'_cur':''] + '.png'"></image>
 				</view>
@@ -35,7 +35,7 @@
 					<image :src="'/static/tabbar/plugin' + [PageCur == 'plugin'?'_cur':''] + '.png'"></image>
 				</view>
 				<view :class="PageCur=='plugin'?'text-green':'text-gray'">扩展</view>
-			</view>
+			</view>-->
 		</view>
 	</view>
 </template>
