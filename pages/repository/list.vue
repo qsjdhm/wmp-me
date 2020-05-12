@@ -4,12 +4,12 @@
 		<view class="system-pack">
 			<scroll-view scroll-x class="tab-pack bg-white nav">
 				<view class="flex text-center">
-					<view class="cu-item flex-sub" :class="index==TabCur?'tab-checked cur':''" v-for="(item,index) in tabData" :key="index" @tap="tabSelect" :data-id="index">
+					<view class="cu-item flex-sub" :class="index==tabCur?'tab-checked cur':''" v-for="(item,index) in tabData" :key="index" @tap="tabSelect" :data-id="index">
 						{{item}}
 					</view>
 				</view>
 			</scroll-view>
-			<scroll-view class="list-pack" scroll-y>
+			<scroll-view v-if="tabCur == 0" class="list-pack" scroll-y>
 				<view class="item-pack" v-for="(item,index) in repositoryData" :key="index">
 					<view class="icon-pack">
 						<img src="../../static/article.png" />
@@ -24,8 +24,23 @@
 						<view class="number-pack">共有文档{{item.number}}篇</view>
 					</view>
 				</view>
-				
 			</scroll-view>
+            <scroll-view v-if="tabCur == 1" class="list-pack" scroll-y>
+            	<view class="item-pack" v-for="(item,index) in hybridData" :key="index">
+            		<view class="icon-pack">
+            			<img src="../../static/article.png" />
+            		</view>
+            		<view class="content-pack">
+            			<view class="title-pack">
+            				<view class="title">{{item.name}}</view>
+            				<view class="dot">
+            					<img src="../../static/dot.png" />
+            				</view>
+            			</view>
+            			<view class="number-pack">共有文档{{item.number}}篇</view>
+            		</view>
+            	</view>
+            </scroll-view>
 		</view>
 	</view>
 	
@@ -58,17 +73,39 @@
 						number: 10
 					}
 				],
-				TabCur: 0,
-				scrollLeft: 0
+                hybridData: [
+                    {
+                    	id: 0,
+                    	name: '嘴亲嘴教学系列2',
+                    	number: 24
+                    },
+                    {
+                    	id: 1,
+                    	name: '前端评级系列2',
+                    	number: 4
+                    },
+                    {
+                    	id: 2,
+                    	name: '前端技术树系列2',
+                    	number: 4
+                    },
+                    {
+                    	id: 3,
+                    	name: '规划与布局2',
+                    	number: 10
+                    }
+                ],
+				tabCur: 0
 			}
 		},
-		onLoad() {
-
+		onLoad(option) {
+            if (option.type == '2') {
+                this.tabCur = 1
+            }
 		},
 		methods: {
 			tabSelect(e) {
-				this.TabCur = e.currentTarget.dataset.id;
-				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+				this.tabCur = e.currentTarget.dataset.id;
 			}
 		}
 	}

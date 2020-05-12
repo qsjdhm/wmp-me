@@ -1,10 +1,10 @@
 <template name="accumulate">
 	<view>
 		<scroll-view scroll-y class="page accumulate-page">
-			<image src="https://cdn.nlark.com/yuque/0/2019/png/280374/1552996358228-assets/web-upload/e256b4ce-d9a4-488b-8da2-032747213982.png"
+			<image src="../../static/BasicsBg.png"
 			 mode="widthFix" class="response"></image>
 			<view class="nav-list">
-				<navigator hover-class="none" url="/pages/repository/list" class="nav-li" navigateTo :class="'bg-'+item.color"
+				<navigator hover-class="none" :url="'/pages/repository/brochure?type='+item.type" class="nav-li" navigateTo :class="'bg-'+item.color"
 				v-for="(item,index) in elements" :key="index">
 					<view class="nav-title">{{item.title}}</view>
 					<view class="nav-name">{{item.name}}</view>
@@ -38,11 +38,13 @@
 			return {
 				elements: [
                     {
+                        type: '1',
 						title: '资产库知识体系',
 						name: 'Asset Library',
 						color: 'cyan'
 					},
 					{
+                        type: '2',
 						title: '移动端知识体系',
 						name: 'Hybrid APP',
 						color: 'blue'

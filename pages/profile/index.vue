@@ -74,16 +74,16 @@
 
 <style>
 	.profile-pack {
-		padding: 30upx;
 		width: 100%;
 		height: 100%;
 		margin-bottom: 60upx;
-		background-color: #fff;
 	}
 	.basics-pack {
 		display: -webkit-flex;
 		display: flex;
-		margin-bottom: 30upx;
+		margin-bottom: 20upx;
+        padding: 30upx;
+        background-color: #fff;
 	}
 	.basics-pack .cu-avatar {
 		width: 128upx;
@@ -111,13 +111,10 @@
 		color: #888;
 		font-size: 26upx;
 	}
-	
-	
-	
-	
-	
-	
-	
+    
+    .cu-timeline {
+        padding: 30upx;
+    }
 	
 	.content {
 		display: flex;
