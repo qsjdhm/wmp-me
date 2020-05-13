@@ -3,7 +3,7 @@
 		<cu-custom bgColor="bg-gradual-blue" :isBack="true"><block slot="backText">返回</block><block slot="content">{{name}}</block></cu-custom>
 		<view class="system-pack">
 			<scroll-view class="list-pack" scroll-y>
-				<view class="item-pack" v-for="(item,index) in articleList" :key="index">
+				<view @tap="goDetail(index)" class="item-pack" v-for="(item,index) in articleList" :key="index">
 					<view class="title">{{item.title}}</view>
 				</view>
 			</scroll-view>
@@ -33,7 +33,16 @@
 		methods: {
 			tabSelect(e) {
 				this.tabCur = e.currentTarget.dataset.id;
-			}
+			},
+            goDetail (index) {
+                let title = this.articleList[index].title;
+                let src = this.articleList[index].src;
+                let href = this.articleList[index].href;
+                let height = this.articleList[index].height;
+            	uni.navigateTo({
+            		url: '/pages/accumulate/detail?title='+encodeURIComponent(JSON.stringify(title))+'&src='+encodeURIComponent(JSON.stringify(src))+'&href='+encodeURIComponent(JSON.stringify(href))+'&height='+height
+            	})
+            }
 		}
 	}
 </script>
